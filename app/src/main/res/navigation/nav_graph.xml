@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.ediga.myquotemaker.WelcomeFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_WelcomeFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.ediga.myquotemaker.SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_MessageSenderFragment"
+            app:destination="@id/MessageSenderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MessageSenderFragment"
+        android:name="com.ediga.myquotemaker.MessageSenderFragment"
+        android:label="MessageSenderFragment"
+        tools:layout="@layout/fragment_send_message">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_MessageReceiverFragment"
+            app:destination="@id/MessageReceiverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MessageReceiverFragment"
+        android:name="com.ediga.myquotemaker.MessageReceiverFragment"
+        android:label="MessageReceiverFragment"
+        tools:layout="@layout/fragment_receiver">
+    </fragment>
+</navigation>
